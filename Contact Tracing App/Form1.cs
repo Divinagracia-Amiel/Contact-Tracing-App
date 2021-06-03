@@ -14,6 +14,7 @@ namespace Contact_Tracing_App
     public partial class Form1 : Form
     {
         string date;
+        string time;
         string firstName;
         string lastName;
         string eMail;
@@ -55,12 +56,22 @@ namespace Contact_Tracing_App
             StreamWriter TraceFile;
 
             date = DateTime.Now.ToLongDateString();
+            time = DateTime.Now.ToLongTimeString();
             firstName = F_name.Text;
             lastName = L_name.Text;
             eMail = email.Text;
             mobileNumber = mobNum.Text;
             addressvar = address.Text;
-            
+
+            TraceFile = File.AppendText(date);
+            TraceFile.WriteLine("//** " + time + "**//");
+            TraceFile.WriteLine();
+            TraceFile.WriteLine("First Name: " + firstName);
+            TraceFile.WriteLine("Last Name: " + lastName);
+            TraceFile.WriteLine("E-mail Address: " + eMail);
+            TraceFile.WriteLine("Mobile Number: " + mobileNumber);
+            TraceFile.WriteLine("Address: " + addressvar);
+
         }
 
         private void import_Click(object sender, EventArgs e)

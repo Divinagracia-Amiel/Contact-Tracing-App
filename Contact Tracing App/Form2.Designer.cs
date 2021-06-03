@@ -63,7 +63,7 @@ namespace Contact_Tracing_App
             this.imp_data.Name = "imp_data";
             this.imp_data.Size = new System.Drawing.Size(414, 187);
             this.imp_data.TabIndex = 13;
-            this.imp_data.Text = "";
+            this.imp_data.Text = "00000000000000000000000000000000000000000000000000";
             // 
             // imp_dataLabel
             // 
