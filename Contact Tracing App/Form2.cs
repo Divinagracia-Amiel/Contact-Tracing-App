@@ -16,5 +16,22 @@ namespace Contact_Tracing_App
         {
             InitializeComponent();
         }
+
+        private void importDataForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imp_submitBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void export_Click(object sender, EventArgs e)
+        {
+            Form1 contactTracing = new Form1();
+            this.Hide();
+            contactTracing.Show();
+        }
     }
 }

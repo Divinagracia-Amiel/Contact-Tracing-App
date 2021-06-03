@@ -18,7 +18,7 @@ namespace Contact_Tracing_App
         string lastName;
         string eMail;
         string mobileNumber;
-        string address;
+        string addressvar;
 
         public Form1()
         {
@@ -55,13 +55,19 @@ namespace Contact_Tracing_App
             StreamWriter TraceFile;
 
             date = DateTime.Now.ToLongDateString();
-
+            firstName = F_name.Text;
+            lastName = L_name.Text;
+            eMail = email.Text;
+            mobileNumber = mobNum.Text;
+            addressvar = address.Text;
             
         }
 
         private void import_Click(object sender, EventArgs e)
         {
-
+            importDataForm importForm = new importDataForm();
+            this.Hide();
+            importForm.Show();
         }
     }
 }

@@ -44,6 +44,7 @@ namespace Contact_Tracing_App
             this.imp_submitBtn.TabIndex = 11;
             this.imp_submitBtn.Text = "Import";
             this.imp_submitBtn.UseVisualStyleBackColor = true;
+            this.imp_submitBtn.Click += new System.EventHandler(this.imp_submitBtn_Click);
             // 
             // export
             // 
@@ -54,6 +55,7 @@ namespace Contact_Tracing_App
             this.export.TabIndex = 12;
             this.export.Text = "Return to Trace Form";
             this.export.UseVisualStyleBackColor = true;
+            this.export.Click += new System.EventHandler(this.export_Click);
             // 
             // imp_data
             // 
@@ -84,6 +86,7 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.imp_submitBtn);
             this.Name = "importDataForm";
             this.Text = "Import Contact Tracing File";
+            this.Load += new System.EventHandler(this.importDataForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
