@@ -149,6 +149,7 @@ namespace Contact_Tracing_App
             this.submitBtn.TabIndex = 10;
             this.submitBtn.Text = "Submit";
             this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // age
             // 
@@ -177,6 +178,7 @@ namespace Contact_Tracing_App
             this.import.TabIndex = 13;
             this.import.Text = "Import File";
             this.import.UseVisualStyleBackColor = true;
+            this.import.Click += new System.EventHandler(this.import_Click);
             // 
             // Form1
             // 

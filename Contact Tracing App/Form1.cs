@@ -6,12 +6,20 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Contact_Tracing_App
 {
     public partial class Form1 : Form
     {
+        string date;
+        string firstName;
+        string lastName;
+        string eMail;
+        string mobileNumber;
+        string address;
+
         public Form1()
         {
             InitializeComponent();
@@ -38,6 +46,20 @@ namespace Contact_Tracing_App
         }
 
         private void addressLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void submitBtn_Click(object sender, EventArgs e)
+        {
+            StreamWriter TraceFile;
+
+            date = DateTime.Now.ToLongDateString();
+
+            
+        }
+
+        private void import_Click(object sender, EventArgs e)
         {
 
         }
