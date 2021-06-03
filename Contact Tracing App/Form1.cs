@@ -20,6 +20,7 @@ namespace Contact_Tracing_App
         string eMail;
         string mobileNumber;
         string addressvar;
+        int agevar;
 
         public Form1()
         {
@@ -53,24 +54,33 @@ namespace Contact_Tracing_App
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
+            if (int.TryParse(age.Text, out agevar) == false)
+            {
+                MessageBox.Show("Age should be an Integer or a whole number");
+                return;
+            }
+ 
             StreamWriter TraceFile;
 
             date = DateTime.Now.ToLongDateString();
             time = DateTime.Now.ToLongTimeString();
             firstName = F_name.Text;
             lastName = L_name.Text;
+            agevar = int.Parse(age.Text);
             eMail = email.Text;
             mobileNumber = mobNum.Text;
             addressvar = address.Text;
 
-            TraceFile = File.AppendText(date);
+            TraceFile = File.AppendText(date +".txt");
             TraceFile.WriteLine("//** " + time + "**//");
-            TraceFile.WriteLine();
             TraceFile.WriteLine("First Name: " + firstName);
             TraceFile.WriteLine("Last Name: " + lastName);
+            TraceFile.WriteLine("Age: " + agevar);
             TraceFile.WriteLine("E-mail Address: " + eMail);
             TraceFile.WriteLine("Mobile Number: " + mobileNumber);
             TraceFile.WriteLine("Address: " + addressvar);
+            TraceFile.WriteLine();
+            TraceFile.Close();
 
         }
 
