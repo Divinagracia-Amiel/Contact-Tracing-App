@@ -16,5 +16,15 @@ namespace Contact_Tracing_App
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void F_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
