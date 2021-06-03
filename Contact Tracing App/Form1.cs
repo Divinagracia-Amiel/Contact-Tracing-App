@@ -14,13 +14,14 @@ namespace Contact_Tracing_App
     public partial class Form1 : Form
     {
         string date;
+        string date_new;
         string time;
         string firstName;
         string lastName;
-        string eMail;
-        string mobileNumber;
+        string eMail;        
         string addressvar;
         int agevar;
+        int mobileNumber;
 
         public Form1()
         {
@@ -59,6 +60,11 @@ namespace Contact_Tracing_App
                 MessageBox.Show("Age should be an Integer or a whole number");
                 return;
             }
+            if (int.TryParse(mobNum.Text, out mobileNumber) == false)
+            {
+                MessageBox.Show("Mobile number should be a series of integers");
+                return;
+            }
  
             StreamWriter TraceFile;
 
@@ -68,10 +74,11 @@ namespace Contact_Tracing_App
             lastName = L_name.Text;
             agevar = int.Parse(age.Text);
             eMail = email.Text;
-            mobileNumber = mobNum.Text;
+            mobileNumber = int.Parse(mobNum.Text);
             addressvar = address.Text;
 
-            TraceFile = File.AppendText(date +".txt");
+            TraceFile = File.AppendText(date + ".txt");
+            TraceFile.WriteLine("//** " + time + "**//");
             TraceFile.WriteLine("//** " + time + "**//");
             TraceFile.WriteLine("First Name: " + firstName);
             TraceFile.WriteLine("Last Name: " + lastName);
@@ -82,6 +89,7 @@ namespace Contact_Tracing_App
             TraceFile.WriteLine();
             TraceFile.Close();
 
+            date_new = DateTime.Now.ToLongDateString(); 
         }
 
         private void import_Click(object sender, EventArgs e)
