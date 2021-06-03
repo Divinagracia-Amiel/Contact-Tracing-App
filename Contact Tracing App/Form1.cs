@@ -26,5 +26,20 @@ namespace Contact_Tracing_App
         {
 
         }
+
+        private void email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void L_nameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addressLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
