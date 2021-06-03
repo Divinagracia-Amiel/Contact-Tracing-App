@@ -17,7 +17,7 @@ namespace Contact_Tracing_App
         string time;
         string firstName;
         string lastName;
-        string eMail;        
+        string eMail;
         string addressvar;
         int agevar;
         long mobileNumber;
@@ -52,7 +52,8 @@ namespace Contact_Tracing_App
 
         }
 
-        private void submitBtn_Click(object sender, EventArgs e)
+
+    private void submitBtn_Click(object sender, EventArgs e)
         {
             if (int.TryParse(age.Text, out agevar) == false)
             {

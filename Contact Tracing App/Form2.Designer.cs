@@ -33,6 +33,7 @@ namespace Contact_Tracing_App
             this.export = new System.Windows.Forms.Button();
             this.imp_data = new System.Windows.Forms.RichTextBox();
             this.imp_dataLabel = new System.Windows.Forms.Label();
+            this.import_method = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // imp_submitBtn
@@ -61,6 +62,7 @@ namespace Contact_Tracing_App
             // 
             this.imp_data.Location = new System.Drawing.Point(12, 45);
             this.imp_data.Name = "imp_data";
+            this.imp_data.ReadOnly = true;
             this.imp_data.Size = new System.Drawing.Size(414, 187);
             this.imp_data.TabIndex = 13;
             this.imp_data.Text = "";
@@ -74,6 +76,17 @@ namespace Contact_Tracing_App
             this.imp_dataLabel.Size = new System.Drawing.Size(252, 31);
             this.imp_dataLabel.TabIndex = 14;
             this.imp_dataLabel.Text = "Contact Information";
+            // 
+            // import_method
+            // 
+            this.import_method.DefaultExt = "\"txt\"";
+            this.import_method.FileName = "                                                                                 " +
+    "          ";
+            this.import_method.FilterIndex = 2;
+            this.import_method.InitialDirectory = "C:\\Users\\Amiel Divinagracia\\source\\repos\\Contact Tracing App\\Contact Tracing App\\" +
+    "bin\\Debug";
+            this.import_method.RestoreDirectory = true;
+            this.import_method.FileOk += new System.ComponentModel.CancelEventHandler(this.import_method_FileOk);
             // 
             // importDataForm
             // 
@@ -98,5 +111,6 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.Button export;
         private System.Windows.Forms.RichTextBox imp_data;
         private System.Windows.Forms.Label imp_dataLabel;
+        private System.Windows.Forms.OpenFileDialog import_method;
     }
 }
