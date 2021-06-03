@@ -31,7 +31,8 @@ namespace Contact_Tracing_App
         {
             Form1 contactTracing = new Form1();
             this.Hide();
-            contactTracing.Show();
+            contactTracing.ShowDialog();
+            this.Close();
         }
     }
 }
